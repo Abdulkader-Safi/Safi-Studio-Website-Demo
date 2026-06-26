@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 200" width="780" height="200">
+<defs><style>
+  @font-face { font-family:'Disp'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/BricolageGrotesque-Bold.ttf'); }
+  @font-face { font-family:'DispR'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/BricolageGrotesque-Regular.ttf'); }
+  @font-face { font-family:'Mono'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/JetBrainsMono-Regular.ttf'); }
+  @font-face { font-family:'MonoB'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/JetBrainsMono-Bold.ttf'); }
+</style></defs>
+<g transform="translate(10,30)">
+      <g transform="translate(30,40)"><g transform="scale(1.2)"><g><rect x="2" y="2" width="96" height="96" rx="2" fill="#F4F1EA"/><rect x="2" y="2" width="96" height="96" rx="2" fill="none" stroke="#1A1815" stroke-width="2.4"/>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+      <text x="190" y="103" font-family="Disp" font-size="62" letter-spacing="-1.5" fill="#1A1815">Safi Studio</text>
+      <text x="193" y="138" font-family="Mono" font-size="19" letter-spacing="3" fill="#5A554C">DEV TOOLS // BUILDS</text>
+    </g>
+</svg>

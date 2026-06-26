@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why copy-and-own beats the component library — Safi Studio</title>
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<meta name="description" content="The case for putting UI components in your own repo instead of coupling to a versioned library, and where the approach breaks down.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { paper:'#F4F1EA', panel:'#EDE8DD', ink:'#1A1815', muted:'#5A554C', line:'#D9D2C4', clay:'#E5533D', clayink:'#C23E2A', moss:'#3F6F4E' },
+  fontFamily: { display:['"Space Grotesk"','ui-sans-serif','system-ui'], body:['Inter','ui-sans-serif','system-ui'] },
+  borderRadius: { sharp:'2px' },
+}}}
+</script>
+<style>
+  html { scroll-behavior:smooth; }
+  body { font-family:Inter,ui-sans-serif,system-ui; -webkit-font-smoothing:antialiased; }
+  .font-display { font-family:"Space Grotesk",ui-sans-serif,system-ui; }
+  .mono { font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,monospace; }
+  .link-underline { background-image:linear-gradient(#E5533D,#E5533D); background-size:0% 2px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .2s ease; }
+  .link-underline:hover { background-size:100% 2px; }
+  .btn-primary { transition:transform .15s ease, background-color .15s ease; }
+  .btn-primary:hover { transform:translateY(-2px); background-color:#C23E2A; }
+  /* article prose */
+  .prose p { color:#3a362f; font-size:18px; line-height:1.75; margin-bottom:1.35rem; }
+  .prose h2 { font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:1.7rem; margin:2.5rem 0 1rem; letter-spacing:-.01em; }
+  .prose h3 { font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:1.25rem; margin:2rem 0 .75rem; }
+  .prose ul { margin:0 0 1.35rem; padding-left:0; list-style:none; }
+  .prose li { color:#3a362f; font-size:18px; line-height:1.7; margin-bottom:.6rem; padding-left:1.5rem; position:relative; }
+  .prose li::before { content:"→"; color:#E5533D; position:absolute; left:0; }
+  .prose a { color:#C23E2A; text-decoration:underline; text-underline-offset:2px; }
+  .prose pre { background:#1f1d18; color:#F4F1EA; border:1px solid #1A1815; border-radius:2px; padding:1.1rem 1.25rem; overflow-x:auto; font-size:14px; line-height:1.6; margin:0 0 1.5rem; }
+  .prose blockquote { border-left:3px solid #E5533D; padding-left:1.25rem; margin:0 0 1.5rem; font-style:italic; color:#5A554C; }
+  .prose strong { color:#1A1815; font-weight:600; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-10 h-10"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display font-semibold tracking-tight text-[17px]">Safi Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+      <a href="products.html" class="link-underline hover:text-ink">Products</a>
+      <a href="services.html" class="link-underline hover:text-ink">Services</a>
+      <a href="blog.html" class="text-ink font-medium">Blog</a>
+      <a href="about.html" class="link-underline hover:text-ink">About</a>
+    </nav>
+    <a href="contact.html" class="btn-primary bg-clay text-paper text-[15px] font-medium px-4 py-2 rounded-sharp">Start a build</a>
+  </div>
+</header>
+
+<main>
+<!-- article header -->
+<section class="border-b border-line">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8 py-14 sm:py-16">
+    <p class="mono text-[13px] text-muted mb-5"><a href="blog.html" class="link-underline hover:text-ink">Blog</a> / Component systems</p>
+    <h1 class="font-display font-bold tracking-tight text-3xl sm:text-[2.6rem] leading-[1.08]">Why copy-and-own beats the component library</h1>
+    <div class="mt-6 flex items-center gap-3 mono text-[13px] text-muted">
+      <span class="inline-flex items-center justify-center w-8 h-8"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span>Safi</span><span>·</span><span>8 min read</span><span>·</span><span>[date]</span>
+    </div>
+  </div>
+</section>
+
+<!-- article body -->
+<article class="prose mx-auto max-w-3xl px-5 sm:px-8 py-12">
+  <p>Every few years a new component library promises to end the copy-paste. You install it, wire up the theme, and for a month it feels great. Then you need a button that's <em>almost</em> the library's button but not quite, and you're three layers deep in override props fighting a design decision someone else made.</p>
+
+  <p>There's a quieter approach that's been winning in the React world and works just as well in Laravel: don't install the components, <strong>copy them into your own repo and own them</strong>. This is the model behind <a href="product-detail.html">LaralCN-UI</a>, and it's the right default for most agency work.</p>
+
+  <h2>What "copy-and-own" actually means</h2>
+
+  <p>Instead of pulling a package into <span class="mono">vendor/</span> and importing components from it, you run a command that copies the component's source straight into your project:</p>
+
+  <pre>$ php artisan ui:add button
+✓ copied button.blade.php to resources/views/components/ui</pre>
+
+  <p>Now it's your file. Not a dependency, not a version you have to track. If the design needs a sharper corner or a different focus ring, you edit the file. No fork, no override layer, no waiting on a maintainer.</p>
+
+  <h2>Why it beats a coupled library</h2>
+
+  <ul>
+    <li><strong>No version chasing.</strong> A breaking change in v3 of a library can hold a whole project hostage. Owned components don't break under you.</li>
+    <li><strong>Full control.</strong> The component is plain Blade and Tailwind. Anyone on the team can read it and change it without learning a library's API.</li>
+    <li><strong>No runtime weight.</strong> You ship only the components you used, as your own markup. Nothing extra in the bundle.</li>
+    <li><strong>It themes from one place.</strong> With Tailwind v4 tokens, one CSS file re-skins every component to a client's brand.</li>
+  </ul>
+
+  <blockquote>The library you can't edit is the library you'll eventually fight. Owned code is the one you can always fix at 3pm before a launch.</blockquote>
+
+  <h2>Where it breaks down</h2>
+
+  <p>Copy-and-own isn't free. You own the maintenance too. If a security fix lands in the upstream pattern, nobody pushes it to you, you pull it yourself. For a small set of components on a handful of projects that's fine. For a hundred components across fifty apps, you want a registry and a CLI that can <span class="mono">diff</span> your copy against the source, which is exactly the problem a real component-system build solves.</p>
+
+  <p>The honest line: copy-and-own trades a dependency you can't control for maintenance you can. For agency work, where every client wants a slightly different look, that trade is almost always worth it.</p>
+
+  <h2>The short version</h2>
+
+  <p>If your team copies components from the last project and tweaks them by hand anyway, you're already doing copy-and-own, just without the tooling. A proper system gives you the CLI, the registry, and the theming so it's clean instead of chaotic. That's the <a href="service-detail.html">component-system build</a>.</p>
+
+  <p class="mono" style="font-size:13px;color:#5A554C;">[This is a sample post written to show the article layout and voice. Replace with your real posts.]</p>
+</article>
+
+<!-- next / CTA -->
+<section class="border-t border-line bg-panel">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8 py-12">
+    <p class="mono text-[13px] text-muted mb-4">Keep reading</p>
+    <a href="blog.html" class="link-underline font-display font-semibold text-xl text-ink">Theming a Blade component system with Tailwind v4 tokens →</a>
+  </div>
+</section>
+
+<section class="bg-ink text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 text-center">
+    <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl max-w-xl mx-auto leading-tight">Want a component system built for your agency?</h2>
+    <a href="service-detail.html" class="btn-primary inline-block mt-7 bg-clay text-paper font-medium px-7 py-3 rounded-sharp text-[16px]">See the build</a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink text-paper/60 border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px]">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#F4F1EA"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display text-paper">Safi Studio</span>
+      <span class="mono text-[12px] ml-2">safi-studio.com</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+      <a href="products.html" class="link-underline hover:text-paper">Products</a>
+      <a href="services.html" class="link-underline hover:text-paper">Services</a>
+      <a href="blog.html" class="link-underline hover:text-paper">Blog</a>
+      <a href="about.html" class="link-underline hover:text-paper">About</a>
+      <a href="contact.html" class="link-underline hover:text-paper">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

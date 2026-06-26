@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Component system build — Safi Studio</title>
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<meta name="description" content="A custom Blade and Tailwind component library for your agency, themed to your brand and built copy-and-own. Scope, deliverables, timeline, and price.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { paper:'#F4F1EA', panel:'#EDE8DD', ink:'#1A1815', muted:'#5A554C', line:'#D9D2C4', clay:'#E5533D', clayink:'#C23E2A', moss:'#3F6F4E' },
+  fontFamily: { display:['"Space Grotesk"','ui-sans-serif','system-ui'], body:['Inter','ui-sans-serif','system-ui'] },
+  borderRadius: { sharp:'2px' },
+}}}
+</script>
+<style>
+  html { scroll-behavior:smooth; }
+  body { font-family:Inter,ui-sans-serif,system-ui; -webkit-font-smoothing:antialiased; }
+  .font-display { font-family:"Space Grotesk",ui-sans-serif,system-ui; }
+  .mono { font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,monospace; }
+  .block { transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .block:hover { transform:translateY(-3px); border-color:#1A1815; box-shadow:6px 6px 0 #1A1815; }
+  .link-underline { background-image:linear-gradient(#E5533D,#E5533D); background-size:0% 2px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .2s ease; }
+  .link-underline:hover { background-size:100% 2px; }
+  .btn-primary { transition:transform .15s ease, background-color .15s ease; }
+  .btn-primary:hover { transform:translateY(-2px); background-color:#C23E2A; }
+  .idx { font-feature-settings:"tnum"; }
+  .check { color:#3F6F4E; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-10 h-10"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display font-semibold tracking-tight text-[17px]">Safi Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+      <a href="products.html" class="link-underline hover:text-ink">Products</a>
+      <a href="services.html" class="text-ink font-medium">Services</a>
+      <a href="blog.html" class="link-underline hover:text-ink">Blog</a>
+      <a href="about.html" class="link-underline hover:text-ink">About</a>
+    </nav>
+    <a href="contact.html" class="btn-primary bg-clay text-paper text-[15px] font-medium px-4 py-2 rounded-sharp">Start a build</a>
+  </div>
+</header>
+
+<main>
+<!-- breadcrumb + header -->
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-20">
+    <p class="mono text-[13px] text-muted mb-5"><a href="services.html" class="link-underline hover:text-ink">Services</a> / Component system build</p>
+    <div class="grid lg:grid-cols-[1fr_0.4fr] gap-10 items-start">
+      <div>
+        <h1 class="font-display font-bold tracking-tight text-4xl sm:text-5xl leading-[1.05]">Component system build</h1>
+        <p class="mt-6 text-[17px] text-muted max-w-xl leading-relaxed">Stop rebuilding the same buttons, forms, and tables on every client project. We build your agency a Blade and Tailwind component library, themed to your brand, that your whole team copies into any project and fully owns. No runtime dependency, no version you have to chase.</p>
+        <a href="contact.html" class="btn-primary inline-block mt-7 bg-clay text-paper font-medium px-6 py-3 rounded-sharp text-[16px]">Scope this build</a>
+      </div>
+      <div class="bg-panel border border-line rounded-sharp p-6">
+        <p class="mono text-[13px] text-muted">from</p>
+        <p class="font-display font-bold text-4xl mb-4">$4,500</p>
+        <dl class="space-y-2.5 text-[14px]">
+          <div class="flex justify-between"><dt class="text-muted">Timeline</dt><dd class="font-medium">2 to 4 weeks</dd></div>
+          <div class="flex justify-between"><dt class="text-muted">Components</dt><dd class="font-medium">20+</dd></div>
+          <div class="flex justify-between"><dt class="text-muted">Stack</dt><dd class="font-medium">Blade + Tailwind v4</dd></div>
+          <div class="flex justify-between"><dt class="text-muted">Ownership</dt><dd class="font-medium">Yours, MIT</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- what's included -->
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16 grid lg:grid-cols-2 gap-12">
+    <div>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mb-6">What you get</h2>
+      <ul class="space-y-3.5 text-[16px] text-muted">
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>A library of 20+ Blade components (buttons, inputs, selects, modals, tables, cards, nav, layout) themed to your brand colours and type.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>An Artisan CLI to pull any component into a new project in one command, the way LaralCN-UI works.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>Tailwind v4 token setup so the whole system themes from one place.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>Docs your team can read, with a live preview of every component.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>A handover call so the team knows how to extend it themselves.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mb-6">Who it's for</h2>
+      <p class="text-[16px] text-muted leading-relaxed mb-4">Agencies and product teams on Laravel that ship multiple client sites a year and rebuild the same UI each time. If your devs copy-paste components from the last project and tweak them by hand, this pays for itself fast.</p>
+      <p class="text-[16px] text-muted leading-relaxed">Not for you if you're on a single long-lived app with a mature design system already in place. In that case the internal-tool build is probably the better fit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- a real preview, not an icon -->
+<section class="border-b border-line bg-panel">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16">
+    <h2 class="font-display font-bold text-2xl sm:text-3xl mb-8">What a delivered component looks like</h2>
+    <div class="grid lg:grid-cols-2 gap-5">
+      <div class="rounded-sharp border border-ink bg-[#1f1d18] text-paper p-5 mono text-[13px] leading-relaxed">
+        <p class="text-white/45">// resources/views/components/ui/table.blade.php</p>
+        <p><span class="text-clay">@props</span>([<span class="text-moss">'rows'</span> =&gt; []])</p>
+        <p class="mt-2"><span class="text-clay">&lt;table</span> class=<span class="text-moss">"w-full text-sm"</span><span class="text-clay">&gt;</span></p>
+        <p class="pl-4"><span class="text-clay">@foreach</span>(<span class="text-[#E2B33C]">$rows</span> <span class="text-clay">as</span> <span class="text-[#E2B33C]">$row</span>)</p>
+        <p class="pl-8 text-white/70">{{-- branded row markup --}}</p>
+        <p class="pl-4"><span class="text-clay">@endforeach</span></p>
+        <p><span class="text-clay">&lt;/table&gt;</span></p>
+      </div>
+      <div class="rounded-sharp border border-ink bg-ink text-paper p-5">
+        <div class="mono text-[12px] text-white/45 mb-4">php artisan ui:add table</div>
+        <div class="border border-white/15 rounded-sharp overflow-hidden">
+          <div class="grid grid-cols-3 bg-white/5 mono text-[12px] text-white/60 px-4 py-2"><span>Client</span><span>Status</span><span>Value</span></div>
+          <div class="grid grid-cols-3 px-4 py-2.5 text-[13px] border-t border-white/10"><span>Acme Co</span><span class="text-moss">Active</span><span>$12,400</span></div>
+          <div class="grid grid-cols-3 px-4 py-2.5 text-[13px] border-t border-white/10"><span>Beeline</span><span class="text-[#E2B33C]">Pending</span><span>$3,900</span></div>
+          <div class="grid grid-cols-3 px-4 py-2.5 text-[13px] border-t border-white/10"><span>Northwind</span><span class="text-clay">Overdue</span><span>$8,100</span></div>
+        </div>
+        <p class="mono text-[11px] text-white/40 mt-3">Themed to your brand, dropped straight into the repo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-ink text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-[1fr_auto] gap-8 items-center">
+    <div>
+      <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl leading-tight">Tell us your stack and your brand.</h2>
+      <p class="mt-3 text-[16px] text-paper/70 max-w-md">We'll send back the component list, a fixed price, and a delivery date.</p>
+    </div>
+    <a href="contact.html" class="btn-primary inline-block bg-clay text-paper font-medium px-7 py-3.5 rounded-sharp text-[16px] text-center">Scope this build</a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink text-paper/60 border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px]">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#F4F1EA"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display text-paper">Safi Studio</span>
+      <span class="mono text-[12px] ml-2">safi-studio.com</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+      <a href="products.html" class="link-underline hover:text-paper">Products</a>
+      <a href="services.html" class="link-underline hover:text-paper">Services</a>
+      <a href="blog.html" class="link-underline hover:text-paper">Blog</a>
+      <a href="about.html" class="link-underline hover:text-paper">About</a>
+      <a href="contact.html" class="link-underline hover:text-paper">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

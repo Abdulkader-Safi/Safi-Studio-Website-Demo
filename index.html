@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safi Studio — developer tools and tooling builds for agencies</title>
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<meta name="description" content="A dev-tools studio building libraries, extensions, and internal tools across Laravel, .NET, Node.js, VS Code, and Obsidian. Products you can use today, builds scoped and priced.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        paper: '#F4F1EA',
+        panel: '#EDE8DD',
+        ink: '#1A1815',
+        muted: '#5A554C',
+        line: '#D9D2C4',
+        clay: '#E5533D',
+        clayink: '#C23E2A',
+        moss: '#3F6F4E',
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui'],
+        body: ['Inter', 'ui-sans-serif', 'system-ui'],
+      },
+      borderRadius: { sharp: '2px' },
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, ui-sans-serif, system-ui; -webkit-font-smoothing: antialiased; }
+  .font-display { font-family: "Space Grotesk", ui-sans-serif, system-ui; }
+  .mono { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace; }
+  /* one repeated primitive: hairline block with an index, lifts on hover */
+  .block { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .block:hover { transform: translateY(-3px); border-color: #1A1815; box-shadow: 6px 6px 0 #1A1815; }
+  .link-underline { background-image: linear-gradient(#E5533D,#E5533D); background-size: 0% 2px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .2s ease; }
+  .link-underline:hover { background-size: 100% 2px; }
+  .btn-primary { transition: transform .15s ease, background-color .15s ease; }
+  .btn-primary:hover { transform: translateY(-2px); background-color: #C23E2A; }
+  .idx { font-feature-settings: "tnum"; letter-spacing: .02em; }
+  .win-dot { width:11px;height:11px;border-radius:9999px; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-10 h-10"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display font-semibold tracking-tight text-[17px]">Safi Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+      <a href="products.html" class="link-underline hover:text-ink">Products</a>
+      <a href="services.html" class="link-underline hover:text-ink">Services</a>
+      <a href="blog.html" class="link-underline hover:text-ink">Blog</a>
+      <a href="about.html" class="link-underline hover:text-ink">About</a>
+    </nav>
+    <a href="contact.html" class="btn-primary bg-clay text-paper text-[15px] font-medium px-4 py-2 rounded-sharp">Start a build</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO: left-aligned, asymmetric split, real product window on the right -->
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10 items-center py-16 sm:py-24">
+    <div>
+      <p class="mono text-[13px] text-clayink mb-5">Laravel · .NET · Node.js · VS Code · Obsidian</p>
+      <h1 class="font-display font-bold tracking-tight text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.05]">
+        The dev tools your agency keeps meaning to build.
+      </h1>
+      <p class="mt-6 text-[17px] sm:text-lg text-muted max-w-xl leading-relaxed">
+        We're a studio of senior engineers who ship the tooling you reinvent on every project: libraries and component systems, editor extensions, and the custom internal tools you never have a spare week for. We work across Laravel, .NET, Node.js, VS Code, and Obsidian. Some are free to grab today. The rest we build to spec.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#contact" class="btn-primary bg-clay text-paper font-medium px-6 py-3 rounded-sharp text-[16px]">Start a build</a>
+        <a href="#products" class="font-medium px-6 py-3 rounded-sharp text-[16px] border border-ink hover:bg-ink hover:text-paper transition-colors">Browse the tools</a>
+      </div>
+      <p class="mt-6 text-[14px] text-muted">Open-source tools are free and MIT. You own the code, no lock-in.</p>
+    </div>
+
+    <!-- real product mockup, not an icon row: a terminal/CLI window for LaralCN-UI -->
+    <div class="relative">
+      <div class="rounded-sharp border border-ink bg-ink text-paper shadow-[8px_8px_0_#1A1815] overflow-hidden">
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#222019]">
+          <span class="win-dot bg-clay"></span><span class="win-dot bg-[#E2B33C]"></span><span class="win-dot bg-moss"></span>
+          <span class="mono text-[12px] text-white/50 ml-3">laralcn-ui — add a component</span>
+        </div>
+        <div class="mono text-[13.5px] leading-relaxed p-5 space-y-1.5">
+          <p><span class="text-clay">$</span> php artisan ui:add sidebar</p>
+          <p class="text-white/55">→ resolving from registry…</p>
+          <p class="text-moss">✓ copied sidebar.blade.php to resources/views/components/ui</p>
+          <p class="text-moss">✓ copied sidebar-08 block</p>
+          <p class="text-white/55">→ Tailwind v4 tokens already present, skipped</p>
+          <p class="pt-1.5"><span class="text-clay">$</span> <span class="animate-pulse">▌</span></p>
+        </div>
+      </div>
+      <div class="absolute -bottom-4 -left-4 hidden sm:block rounded-sharp border border-ink bg-paper px-3.5 py-2 shadow-[4px_4px_0_#1A1815]">
+        <span class="mono text-[12px] text-ink">25 components · copy &amp; own · MIT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP: real, specific, no fake stat banner -->
+<section id="proof" class="border-b border-line bg-panel">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-wrap items-center gap-x-10 gap-y-4 justify-between">
+    <p class="mono text-[13px] text-muted">Built and shipping in the open:</p>
+    <div class="flex flex-wrap items-center gap-x-8 gap-y-3 text-[15px]">
+      <span class="font-display font-semibold">LaralCN-UI <span class="text-muted font-body font-normal">— live docs</span></span>
+      <span class="text-line">/</span>
+      <span class="font-display font-semibold">Obsidian plugins</span>
+      <span class="text-line">/</span>
+      <span class="font-display font-semibold">VS Code extensions</span>
+      <span class="text-line">/</span>
+      <span class="font-display font-semibold">Laravel packages</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS: the repeated primitive, varied weight so it's not a uniform grid -->
+<section id="products" class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20">
+    <div class="flex items-end justify-between gap-6 mb-10">
+      <div>
+        <p class="mono text-[13px] text-clayink mb-2">Products</p>
+        <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl max-w-lg leading-tight">Grab these today. Free, open, yours to edit.</h2>
+      </div>
+      <p class="hidden sm:block text-[15px] text-muted max-w-xs text-right">No accounts, no runtime dependency. You copy the code into your own repo and own it.</p>
+    </div>
+
+    <!-- hero product: full width, bigger -->
+    <article class="block bg-paper border border-line rounded-sharp p-6 sm:p-8 mb-5 grid lg:grid-cols-[0.55fr_0.45fr] gap-8 items-center">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <span class="idx mono text-[13px] text-clay">01</span>
+          <span class="mono text-[12px] px-2 py-0.5 border border-moss text-moss rounded-sharp">Live · free · MIT</span>
+        </div>
+        <h3 class="font-display font-bold text-2xl mb-2">LaralCN-UI</h3>
+        <p class="text-[16px] text-muted leading-relaxed mb-4">A shadcn-style component system for Laravel. Pure Blade and Tailwind v4, pulled into your own source tree through an Artisan CLI or a one-click copy from the docs. No version coupling, no library to fight. 25 components and blocks, including a composable sidebar.</p>
+        <a href="https://laralcn-ui.abdulkadersafi.com" class="link-underline font-medium text-ink">Open the docs →</a>
+      </div>
+      <div class="rounded-sharp border border-ink bg-[#1f1d18] text-paper p-4 mono text-[12.5px] leading-relaxed">
+        <p class="text-white/45">// resources/views/components/ui/button.blade.php</p>
+        <p><span class="text-clay">&lt;button</span> {{ <span class="text-[#E2B33C]">$attributes</span>-&gt;merge([</p>
+        <p class="pl-4"><span class="text-moss">'class'</span> =&gt; <span class="text-moss">'inline-flex h-9 px-4 rounded-md'</span></p>
+        <p>]) }}<span class="text-clay">&gt;</span></p>
+        <p class="pl-4">{{ <span class="text-[#E2B33C]">$slot</span> }}</p>
+        <p><span class="text-clay">&lt;/button&gt;</span></p>
+      </div>
+    </article>
+
+    <!-- two supporting products, uneven from the hero -->
+    <div class="grid md:grid-cols-2 gap-5">
+      <article class="block bg-paper border border-line rounded-sharp p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="idx mono text-[13px] text-clay">02</span>
+          <span class="mono text-[12px] px-2 py-0.5 border border-moss text-moss rounded-sharp">Free</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2">Editor plugins</h3>
+        <p class="text-[15px] text-muted leading-relaxed mb-4">Obsidian plugins and VS Code extensions that take the friction out of real workflows: in-editor panels, audits, and quick-capture, built on a Svelte extension starter.</p>
+        <div class="rounded-sharp border border-line bg-panel px-3 py-2 mono text-[12px] text-muted">⌘⇧P  ›  Run audit in panel</div>
+      </article>
+      <article class="block bg-paper border border-line rounded-sharp p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="idx mono text-[13px] text-clay">03</span>
+          <span class="mono text-[12px] px-2 py-0.5 border border-line text-muted rounded-sharp">Coming soon</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2">LaralCN-UI Pro</h3>
+        <p class="text-[15px] text-muted leading-relaxed mb-4">Premium blocks, dashboard kits, and app starter templates on top of the free core, with priority updates. Agency license, renews yearly. In the works.</p>
+        <a href="#contact" class="link-underline font-medium text-ink text-[15px]">Get told when it ships →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES: named, scoped, "from" pricing -->
+<section id="services" class="border-b border-line bg-panel">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20">
+    <div class="mb-10 max-w-2xl">
+      <p class="mono text-[13px] text-clayink mb-2">Services</p>
+      <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl leading-tight">When the tool doesn't exist yet, we build it for you.</h2>
+      <p class="mt-4 text-[16px] text-muted leading-relaxed">Fixed scope, fixed starting price, delivered by senior engineers who've done it before. Available for work now.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <article class="block bg-paper border border-line rounded-sharp p-6 flex flex-col">
+        <span class="idx mono text-[13px] text-clay mb-3">01</span>
+        <h3 class="font-display font-bold text-xl mb-2">Component system build</h3>
+        <p class="text-[15px] text-muted leading-relaxed flex-1">A custom component library for your agency's stack and brand, Laravel Blade, React, or whatever you ship on. The LaralCN approach, applied to the things you rebuild on every client project.</p>
+        <p class="mt-5 pt-4 border-t border-line"><span class="mono text-[13px] text-muted">from</span> <span class="font-display font-bold text-2xl ml-1">$4,500</span></p>
+      </article>
+
+      <article class="block bg-paper border border-line rounded-sharp p-6 flex flex-col">
+        <span class="idx mono text-[13px] text-clay mb-3">02</span>
+        <h3 class="font-display font-bold text-xl mb-2">Internal tool / admin build</h3>
+        <p class="text-[15px] text-muted leading-relaxed flex-1">The dashboard, CMS, or internal tool you keep deferring. Scoped tight and built to ship, not a six-month enterprise project.</p>
+        <p class="mt-5 pt-4 border-t border-line"><span class="mono text-[13px] text-muted">from</span> <span class="font-display font-bold text-2xl ml-1">$7,500</span></p>
+      </article>
+
+      <article class="block bg-paper border border-line rounded-sharp p-6 flex flex-col">
+        <span class="idx mono text-[13px] text-clay mb-3">03</span>
+        <h3 class="font-display font-bold text-xl mb-2">Extension / package build</h3>
+        <p class="text-[15px] text-muted leading-relaxed flex-1">A VS Code extension, Obsidian plugin, or a package for Laravel, .NET, or Node, built to your team's workflow, tested and documented.</p>
+        <p class="mt-5 pt-4 border-t border-line"><span class="mono text-[13px] text-muted">from</span> <span class="font-display font-bold text-2xl ml-1">$3,000</span></p>
+      </article>
+
+      <article class="block bg-ink text-paper border border-ink rounded-sharp p-6 flex flex-col">
+        <span class="idx mono text-[13px] text-clay mb-3">04</span>
+        <h3 class="font-display font-bold text-xl mb-2">Tooling retainer</h3>
+        <p class="text-[15px] text-paper/70 leading-relaxed flex-1">Ongoing: we maintain and extend your component system and internal tools so they don't rot. Monthly, cancel anytime.</p>
+        <p class="mt-5 pt-4 border-t border-white/15"><span class="mono text-[13px] text-paper/55">from</span> <span class="font-display font-bold text-2xl ml-1">$1,200<span class="text-base text-paper/55">/mo</span></span></p>
+      </article>
+    </div>
+    <p class="mt-6 mono text-[12.5px] text-muted">Prices are starting points. Real scope, real quote after a short call.</p>
+  </div>
+</section>
+
+<!-- ABOUT / why us -->
+<section id="about" class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
+    <div>
+      <p class="mono text-[13px] text-clayink mb-2">About</p>
+      <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl leading-tight">Senior engineers, real work in the open.</h2>
+    </div>
+    <div class="space-y-5 text-[16px] text-muted leading-relaxed max-w-xl">
+      <p>Safi Studio is a small studio led by Safi, a senior and lead Laravel engineer. It's where our tools live: the open-source work we ship for the community, and the tooling builds we take on for agencies that need senior hands without a long hire.</p>
+      <p>The proof isn't a testimonial wall. It's <a href="https://laralcn-ui.abdulkadersafi.com" class="link-underline text-ink font-medium">LaralCN-UI</a> running live, plugins you can install, and packages you can read. You can judge the work before you ever email us.</p>
+      <p>We work across Australia and the GCC, which means you stay close to the people building the thing, start to finish.</p>
+      <div class="flex flex-wrap gap-3 pt-2">
+        <span class="mono text-[13px] border border-line rounded-sharp px-3 py-1.5">Laravel</span>
+        <span class="mono text-[13px] border border-line rounded-sharp px-3 py-1.5">.NET</span>
+        <span class="mono text-[13px] border border-line rounded-sharp px-3 py-1.5">Node.js</span>
+        <span class="mono text-[13px] border border-line rounded-sharp px-3 py-1.5">VS Code / Obsidian</span>
+        <span class="mono text-[13px] border border-line rounded-sharp px-3 py-1.5">Open source</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / single CTA band -->
+<section id="contact" class="bg-ink text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20 grid lg:grid-cols-[1fr_0.9fr] gap-12 items-center">
+    <div>
+      <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl leading-tight">Tell us what you keep rebuilding.</h2>
+      <p class="mt-4 text-[16px] text-paper/70 leading-relaxed max-w-md">One short message about the tool or system you need. We'll come back with scope, a real price, and a timeline. No deck, no sales call funnel.</p>
+      <p class="mt-6 mono text-[13px] text-paper/50">Replies within one business day.</p>
+    </div>
+    <form class="space-y-3" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Wire this to your email / Formspree'; this.querySelector('button').classList.add('bg-moss');">
+      <div class="grid sm:grid-cols-2 gap-3">
+        <input required type="text" placeholder="Name" class="bg-[#26241e] border border-white/15 rounded-sharp px-4 py-3 text-paper placeholder-paper/40 focus:border-clay focus:outline-none text-[15px]">
+        <input required type="email" placeholder="Email" class="bg-[#26241e] border border-white/15 rounded-sharp px-4 py-3 text-paper placeholder-paper/40 focus:border-clay focus:outline-none text-[15px]">
+      </div>
+      <textarea required rows="4" placeholder="What do you need built?" class="w-full bg-[#26241e] border border-white/15 rounded-sharp px-4 py-3 text-paper placeholder-paper/40 focus:border-clay focus:outline-none text-[15px]"></textarea>
+      <button type="submit" class="btn-primary w-full bg-clay text-paper font-medium px-6 py-3 rounded-sharp text-[16px]">Send it over</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-paper/60 border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px]">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#F4F1EA"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display text-paper">Safi Studio</span>
+      <span class="mono text-[12px] ml-2">safi-studio.com</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+      <a href="products.html" class="link-underline hover:text-paper">Products</a>
+      <a href="services.html" class="link-underline hover:text-paper">Services</a>
+      <a href="blog.html" class="link-underline hover:text-paper">Blog</a>
+      <a href="about.html" class="link-underline hover:text-paper">About</a>
+      <a href="https://abdulkadersafi.com" class="link-underline hover:text-paper">Portfolio</a>
+      <a href="contact.html" class="link-underline hover:text-paper">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Safi Studio</title>
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<meta name="description" content="Notes on building dev tools across Laravel, .NET, Node.js, and editors: component systems, extensions, packages, and the trade-offs behind shipping tools that agencies actually keep.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { paper:'#F4F1EA', panel:'#EDE8DD', ink:'#1A1815', muted:'#5A554C', line:'#D9D2C4', clay:'#E5533D', clayink:'#C23E2A', moss:'#3F6F4E' },
+  fontFamily: { display:['"Space Grotesk"','ui-sans-serif','system-ui'], body:['Inter','ui-sans-serif','system-ui'] },
+  borderRadius: { sharp:'2px' },
+}}}
+</script>
+<style>
+  html { scroll-behavior:smooth; }
+  body { font-family:Inter,ui-sans-serif,system-ui; -webkit-font-smoothing:antialiased; }
+  .font-display { font-family:"Space Grotesk",ui-sans-serif,system-ui; }
+  .mono { font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,monospace; }
+  .block { transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .block:hover { transform:translateY(-3px); border-color:#1A1815; box-shadow:6px 6px 0 #1A1815; }
+  .link-underline { background-image:linear-gradient(#E5533D,#E5533D); background-size:0% 2px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .2s ease; }
+  .link-underline:hover { background-size:100% 2px; }
+  .btn-primary { transition:transform .15s ease, background-color .15s ease; }
+  .btn-primary:hover { transform:translateY(-2px); background-color:#C23E2A; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-10 h-10"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display font-semibold tracking-tight text-[17px]">Safi Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+      <a href="products.html" class="link-underline hover:text-ink">Products</a>
+      <a href="services.html" class="link-underline hover:text-ink">Services</a>
+      <a href="blog.html" class="text-ink font-medium">Blog</a>
+      <a href="about.html" class="link-underline hover:text-ink">About</a>
+    </nav>
+    <a href="contact.html" class="btn-primary bg-clay text-paper text-[15px] font-medium px-4 py-2 rounded-sharp">Start a build</a>
+  </div>
+</header>
+
+<main>
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-20">
+    <p class="mono text-[13px] text-clayink mb-4">Blog</p>
+    <h1 class="font-display font-bold tracking-tight text-4xl sm:text-5xl leading-[1.05] max-w-2xl">Notes on building dev tools that agencies actually use.</h1>
+    <p class="mt-6 text-[17px] text-muted max-w-xl leading-relaxed">Dev tooling across Laravel, .NET, Node.js, and the editor world: component systems, extensions, packages, and the trade-offs behind shipping a tool people keep. Written for engineers, no fluff.</p>
+  </div>
+</section>
+
+<!-- featured post + list -->
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16">
+    <!-- featured -->
+    <a href="blog-detail.html" class="block bg-paper border border-line rounded-sharp p-6 sm:p-8 mb-8 grid lg:grid-cols-[0.5fr_0.5fr] gap-8 items-center">
+      <div class="rounded-sharp border border-ink bg-ink text-paper p-6 mono text-[13px] leading-relaxed order-2 lg:order-1">
+        <p class="text-white/45">// the copy-and-own idea</p>
+        <p><span class="text-clay">$</span> php artisan ui:add button</p>
+        <p class="text-moss">✓ it's your file now</p>
+        <p class="text-white/55">→ no vendor lock, edit freely</p>
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="flex items-center gap-3 mb-3 mono text-[12px] text-muted">
+          <span class="px-2 py-0.5 border border-clay text-clayink rounded-sharp">Featured</span>
+          <span>Component systems</span><span>·</span><span>8 min</span>
+        </div>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl leading-tight mb-3">Why copy-and-own beats the component library</h2>
+        <p class="text-[16px] text-muted leading-relaxed">Most UI libraries couple you to a version you'll fight for years. There's a quieter approach: put the components in your own repo and own them outright. Here's the case for it, and where it breaks down.</p>
+        <span class="link-underline inline-block font-medium text-ink mt-4">Read it →</span>
+      </div>
+    </a>
+
+    <!-- post list, varied not uniform -->
+    <div class="grid md:grid-cols-2 gap-5">
+      <a href="blog-detail.html" class="block bg-paper border border-line rounded-sharp p-6">
+        <div class="flex items-center gap-3 mb-3 mono text-[12px] text-muted"><span>Laravel</span><span>·</span><span>6 min</span></div>
+        <h3 class="font-display font-bold text-xl leading-tight mb-2">Theming a Blade component system with Tailwind v4 tokens</h3>
+        <p class="text-[15px] text-muted leading-relaxed">One CSS file, every component re-themed. How the v4 token model makes a copy-and-own system actually maintainable.</p>
+      </a>
+      <a href="blog-detail.html" class="block bg-paper border border-line rounded-sharp p-6">
+        <div class="flex items-center gap-3 mb-3 mono text-[12px] text-muted"><span>Plugins</span><span>·</span><span>5 min</span></div>
+        <h3 class="font-display font-bold text-xl leading-tight mb-2">Building a VS Code extension panel in Svelte</h3>
+        <p class="text-[15px] text-muted leading-relaxed">Webview messaging, an esbuild setup, and the parts of the extension API that trip everyone up the first time.</p>
+      </a>
+      <a href="blog-detail.html" class="block bg-paper border border-line rounded-sharp p-6">
+        <div class="flex items-center gap-3 mb-3 mono text-[12px] text-muted"><span>Tooling</span><span>·</span><span>7 min</span></div>
+        <h3 class="font-display font-bold text-xl leading-tight mb-2">The internal tool your agency keeps deferring</h3>
+        <p class="text-[15px] text-muted leading-relaxed">Why the admin dashboard never gets built, what it costs you in lost hours, and how to scope it small enough to ship.</p>
+      </a>
+      <a href="blog-detail.html" class="block bg-paper border border-line rounded-sharp p-6">
+        <div class="flex items-center gap-3 mb-3 mono text-[12px] text-muted"><span>Open source</span><span>·</span><span>4 min</span></div>
+        <h3 class="font-display font-bold text-xl leading-tight mb-2">Giving the tools away is the pitch</h3>
+        <p class="text-[15px] text-muted leading-relaxed">How free open-source work does more for a solo studio than any amount of cold outreach. The funnel, honestly.</p>
+      </a>
+    </div>
+
+    <p class="mt-10 text-center mono text-[13px] text-muted">More posts coming. This is the start.</p>
+  </div>
+</section>
+
+<section class="bg-ink text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 text-center">
+    <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl max-w-xl mx-auto leading-tight">Want one of these built, not just read about?</h2>
+    <a href="contact.html" class="btn-primary inline-block mt-7 bg-clay text-paper font-medium px-7 py-3 rounded-sharp text-[16px]">Start a build</a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink text-paper/60 border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px]">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#F4F1EA"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display text-paper">Safi Studio</span>
+      <span class="mono text-[12px] ml-2">safi-studio.com</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+      <a href="products.html" class="link-underline hover:text-paper">Products</a>
+      <a href="services.html" class="link-underline hover:text-paper">Services</a>
+      <a href="blog.html" class="link-underline hover:text-paper">Blog</a>
+      <a href="about.html" class="link-underline hover:text-paper">About</a>
+      <a href="contact.html" class="link-underline hover:text-paper">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

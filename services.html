@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Safi Studio</title>
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<meta name="description" content="Productized tooling builds for agencies: libraries, component systems, internal tools, extensions, and a maintenance retainer across Laravel, .NET, Node.js, and editors. Fixed scope, starting prices.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { paper:'#F4F1EA', panel:'#EDE8DD', ink:'#1A1815', muted:'#5A554C', line:'#D9D2C4', clay:'#E5533D', clayink:'#C23E2A', moss:'#3F6F4E' },
+  fontFamily: { display:['"Space Grotesk"','ui-sans-serif','system-ui'], body:['Inter','ui-sans-serif','system-ui'] },
+  borderRadius: { sharp:'2px' },
+}}}
+</script>
+<style>
+  html { scroll-behavior:smooth; }
+  body { font-family:Inter,ui-sans-serif,system-ui; -webkit-font-smoothing:antialiased; }
+  .font-display { font-family:"Space Grotesk",ui-sans-serif,system-ui; }
+  .mono { font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,monospace; }
+  .block { transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .block:hover { transform:translateY(-3px); border-color:#1A1815; box-shadow:6px 6px 0 #1A1815; }
+  .link-underline { background-image:linear-gradient(#E5533D,#E5533D); background-size:0% 2px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .2s ease; }
+  .link-underline:hover { background-size:100% 2px; }
+  .btn-primary { transition:transform .15s ease, background-color .15s ease; }
+  .btn-primary:hover { transform:translateY(-2px); background-color:#C23E2A; }
+  .idx { font-feature-settings:"tnum"; letter-spacing:.02em; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-10 h-10"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display font-semibold tracking-tight text-[17px]">Safi Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+      <a href="products.html" class="link-underline hover:text-ink">Products</a>
+      <a href="services.html" class="text-ink font-medium">Services</a>
+      <a href="blog.html" class="link-underline hover:text-ink">Blog</a>
+      <a href="about.html" class="link-underline hover:text-ink">About</a>
+    </nav>
+    <a href="contact.html" class="btn-primary bg-clay text-paper text-[15px] font-medium px-4 py-2 rounded-sharp">Start a build</a>
+  </div>
+</header>
+
+<main>
+<!-- page header -->
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-20">
+    <p class="mono text-[13px] text-clayink mb-4">Services</p>
+    <h1 class="font-display font-bold tracking-tight text-4xl sm:text-5xl leading-[1.05] max-w-2xl">When the tool doesn't exist yet, we build it for you.</h1>
+    <p class="mt-6 text-[17px] text-muted max-w-xl leading-relaxed">Four ways to work together, each with a fixed scope and a starting price. Senior engineers who've shipped this before across Laravel, .NET, Node.js, and the editor world, available now. No agency overhead, no account managers, you stay close to the people writing the code.</p>
+  </div>
+</section>
+
+<!-- the four offers, varied sizes, repeated primitive -->
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16 space-y-5">
+
+    <article class="block bg-paper border border-line rounded-sharp p-6 sm:p-8 grid lg:grid-cols-[0.6fr_0.4fr] gap-8 items-center">
+      <div>
+        <div class="flex items-center gap-3 mb-3"><span class="idx mono text-[13px] text-clay">01</span><span class="mono text-[12px] px-2 py-0.5 border border-line text-muted rounded-sharp">Most popular</span></div>
+        <h2 class="font-display font-bold text-2xl mb-2">Component system build</h2>
+        <p class="text-[16px] text-muted leading-relaxed mb-4">A custom component library for your agency's stack and brand, Laravel Blade, React, or whatever you ship on. The LaralCN approach applied to the buttons, forms, tables, and layouts you rebuild on every client project, copy-and-own so your team fully controls them.</p>
+        <a href="service-detail.html" class="link-underline font-medium text-ink">What's included →</a>
+      </div>
+      <div class="border-l border-line pl-6">
+        <p class="mono text-[13px] text-muted">from</p>
+        <p class="font-display font-bold text-3xl">$4,500</p>
+        <p class="text-[14px] text-muted mt-2">2 to 4 weeks. 20+ components, themed to your brand, docs included.</p>
+      </div>
+    </article>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <article class="block bg-paper border border-line rounded-sharp p-6 flex flex-col">
+        <span class="idx mono text-[13px] text-clay mb-3">02</span>
+        <h2 class="font-display font-bold text-xl mb-2">Internal tool / admin build</h2>
+        <p class="text-[15px] text-muted leading-relaxed flex-1">The dashboard, CMS, or internal tool you keep deferring. Scoped tight and built to ship in weeks, not a six-month enterprise project that never lands.</p>
+        <p class="mt-5 pt-4 border-t border-line"><span class="mono text-[13px] text-muted">from</span> <span class="font-display font-bold text-2xl ml-1">$7,500</span></p>
+      </article>
+      <article class="block bg-paper border border-line rounded-sharp p-6 flex flex-col">
+        <span class="idx mono text-[13px] text-clay mb-3">03</span>
+        <h2 class="font-display font-bold text-xl mb-2">Extension / package build</h2>
+        <p class="text-[15px] text-muted leading-relaxed flex-1">A VS Code extension, Obsidian plugin, or a package for Laravel, .NET, or Node, built to your team's workflow. Tested, documented, and handed over ready to publish or keep private.</p>
+        <p class="mt-5 pt-4 border-t border-line"><span class="mono text-[13px] text-muted">from</span> <span class="font-display font-bold text-2xl ml-1">$3,000</span></p>
+      </article>
+    </div>
+
+    <article class="block bg-ink text-paper border border-ink rounded-sharp p-6 sm:p-8 grid lg:grid-cols-[0.6fr_0.4fr] gap-8 items-center">
+      <div>
+        <span class="idx mono text-[13px] text-clay mb-3 block">04</span>
+        <h2 class="font-display font-bold text-2xl mb-2">Tooling retainer</h2>
+        <p class="text-[16px] text-paper/70 leading-relaxed">Ongoing maintenance so your component system and internal tools don't rot. New components when you need them, version bumps, bug fixes, and a senior engineer on call. Monthly, cancel anytime.</p>
+      </div>
+      <div class="border-l border-white/15 pl-6">
+        <p class="mono text-[13px] text-paper/55">from</p>
+        <p class="font-display font-bold text-3xl">$1,200<span class="text-lg text-paper/55">/mo</span></p>
+        <p class="text-[14px] text-paper/55 mt-2">Rolling monthly. A set block of hours, used however you need.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- how it works: numbered but earned, not filler -->
+<section class="border-b border-line bg-panel">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16">
+    <h2 class="font-display font-bold text-2xl sm:text-3xl mb-8">How a build runs</h2>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="bg-paper border border-line rounded-sharp p-5">
+        <p class="mono text-[13px] text-clay mb-2">Step 01</p>
+        <h3 class="font-display font-semibold text-lg mb-1.5">A short call</h3>
+        <p class="text-[15px] text-muted leading-relaxed">You tell us what you keep rebuilding. We come back with a fixed scope, a real price, and a timeline. No deck.</p>
+      </div>
+      <div class="bg-paper border border-line rounded-sharp p-5">
+        <p class="mono text-[13px] text-clay mb-2">Step 02</p>
+        <h3 class="font-display font-semibold text-lg mb-1.5">We build in the open</h3>
+        <p class="text-[15px] text-muted leading-relaxed">You see progress as it goes, not a big reveal at the end. Feedback early, fixes early.</p>
+      </div>
+      <div class="bg-paper border border-line rounded-sharp p-5">
+        <p class="mono text-[13px] text-clay mb-2">Step 03</p>
+        <h3 class="font-display font-semibold text-lg mb-1.5">You own it</h3>
+        <p class="text-[15px] text-muted leading-relaxed">Code handed over, documented, yours. No runtime lock-in, no licence to keep paying. Retainer optional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-ink text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 text-center">
+    <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl max-w-xl mx-auto leading-tight">Got something you keep rebuilding?</h2>
+    <p class="mt-4 text-[16px] text-paper/70 max-w-md mx-auto">One message with the rough shape of it. We'll reply within a business day with scope and a price.</p>
+    <a href="contact.html" class="btn-primary inline-block mt-7 bg-clay text-paper font-medium px-7 py-3 rounded-sharp text-[16px]">Start a build</a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink text-paper/60 border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px]">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#F4F1EA"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display text-paper">Safi Studio</span>
+      <span class="mono text-[12px] ml-2">safi-studio.com</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+      <a href="products.html" class="link-underline hover:text-paper">Products</a>
+      <a href="services.html" class="link-underline hover:text-paper">Services</a>
+      <a href="blog.html" class="link-underline hover:text-paper">Blog</a>
+      <a href="about.html" class="link-underline hover:text-paper">About</a>
+      <a href="contact.html" class="link-underline hover:text-paper">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

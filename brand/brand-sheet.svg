@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2000" width="1600" height="2000">
+<defs><style>
+  @font-face { font-family:'Disp'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/BricolageGrotesque-Bold.ttf'); }
+  @font-face { font-family:'DispR'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/BricolageGrotesque-Regular.ttf'); }
+  @font-face { font-family:'Mono'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/JetBrainsMono-Regular.ttf'); }
+  @font-face { font-family:'MonoB'; src:url('file:///sessions/serene-great-franklin/mnt/.claude/skills/canvas-design/canvas-fonts/JetBrainsMono-Bold.ttf'); }
+</style></defs>
+<rect width="1600" height="2000" fill="#F4F1EA"/>
+
+<!-- header -->
+<text x="90" y="130" font-family="Mono" font-size="22" letter-spacing="6" fill="#5A554C">SAFI STUDIO</text>
+<text x="90" y="200" font-family="Disp" font-size="78" letter-spacing="-2" fill="#1A1815">Brand mark</text>
+<line x1="90" y1="250" x2="1510" y2="250" stroke="#D9D2C4" stroke-width="2"/>
+<text x="90" y="290" font-family="Mono" font-size="18" letter-spacing="2" fill="#5A554C">[ S ]  —  copy-and-own. you hold the S.</text>
+
+<!-- hero primary mark -->
+<g transform="translate(90,360) scale(4.0)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+<rect x="490" y="360" width="1020" height="400" fill="#EDE8DD"/>
+<g transform="translate(540,380) scale(3.6)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+<text x="900" y="500" font-family="Disp" font-size="46" letter-spacing="-1" fill="#1A1815">The mark</text>
+<text x="900" y="545" font-family="DispR" font-size="22" fill="#5A554C">A constructed S, framed by two brackets,</text>
+<text x="900" y="577" font-family="DispR" font-size="22" fill="#5A554C">held in a hairline square. Sharp 2px corners.</text>
+<text x="900" y="609" font-family="DispR" font-size="22" fill="#5A554C">One accent of clay, used once.</text>
+<text x="900" y="690" font-family="Mono" font-size="16" letter-spacing="1" fill="#E5533D">#E5533D  ·  clay accent</text>
+<text x="900" y="720" font-family="Mono" font-size="16" letter-spacing="1" fill="#1A1815">#1A1815  ·  ink</text>
+
+<!-- horizontal lockups: light + dark -->
+<line x1="90" y1="820" x2="1510" y2="820" stroke="#D9D2C4" stroke-width="2"/>
+<text x="90" y="870" font-family="Mono" font-size="18" letter-spacing="3" fill="#5A554C">LOCKUP</text>
+
+<g transform="translate(90,900)">
+      <g transform="translate(30,40)"><g transform="scale(1.2)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g></g>
+      <text x="190" y="103" font-family="Disp" font-size="62" letter-spacing="-1.5" fill="#1A1815">Safi Studio</text>
+      <text x="193" y="138" font-family="Mono" font-size="19" letter-spacing="3" fill="#5A554C">DEV TOOLS // BUILDS</text>
+    </g>
+
+<rect x="90" y="1120" width="1420" height="210" fill="#1A1815"/>
+<g transform="translate(90,1130)">
+      <g transform="translate(30,40)"><g transform="scale(1.2)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#F4F1EA">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g></g>
+      <text x="190" y="103" font-family="Disp" font-size="62" letter-spacing="-1.5" fill="#F4F1EA">Safi Studio</text>
+      <text x="193" y="138" font-family="Mono" font-size="19" letter-spacing="3" fill="#A8A296">DEV TOOLS // BUILDS</text>
+    </g>
+
+<!-- favicon / scale row -->
+<line x1="90" y1="1400" x2="1510" y2="1400" stroke="#D9D2C4" stroke-width="2"/>
+<text x="90" y="1450" font-family="Mono" font-size="18" letter-spacing="3" fill="#5A554C">HOLDS AT ANY SIZE</text>
+<g transform="translate(90,1490) scale(2.2)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+<g transform="translate(360,1490) scale(1.4)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+<g transform="translate(560,1490) scale(0.85)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+<g transform="translate(700,1490) scale(0.5)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+<rect x="90" y="1490" width="220" height="220" fill="none" stroke="#D9D2C4" stroke-width="1.5"/>
+<text x="800" y="1560" font-family="DispR" font-size="22" fill="#5A554C">216px · 88px · 64px · 32px — the strokes</text>
+<text x="800" y="1592" font-family="DispR" font-size="22" fill="#5A554C">keep their weight down to the favicon.</text>
+
+<!-- single colour / reversed -->
+<line x1="90" y1="1760" x2="1510" y2="1760" stroke="#D9D2C4" stroke-width="2"/>
+<text x="90" y="1810" font-family="Mono" font-size="18" letter-spacing="3" fill="#5A554C">ONE COLOUR</text>
+<rect x="90" y="1840" width="200" height="120" fill="none"/>
+<g transform="translate(110,1850) scale(1.0)"><g transform="translate(50,50) scale(1.42) translate(-50,-50)"><g>
+      <g fill="#1A1815">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#1A1815">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#1A1815">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g></g>
+<rect x="360" y="1840" width="200" height="120" fill="#1A1815"/>
+<g transform="translate(380,1850) scale(1.0)"><g><rect x="2" y="2" width="96" height="96" rx="2" fill="none" stroke="#F4F1EA" stroke-width="2.4"/>
+      <g fill="#F4F1EA">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#F4F1EA">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#F4F1EA">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g>
+<rect x="630" y="1840" width="200" height="120" fill="#E5533D"/>
+<g transform="translate(650,1850) scale(1.0)"><g><rect x="2" y="2" width="96" height="96" rx="2" fill="none" stroke="#F4F1EA" stroke-width="2.4"/>
+      <g fill="#F4F1EA">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#F4F1EA">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#F4F1EA">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></g>
+
+<text x="1510" y="1950" text-anchor="end" font-family="Mono" font-size="15" letter-spacing="2" fill="#5A554C">safi-studio.com</text>
+</svg>

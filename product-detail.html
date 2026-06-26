@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LaralCN-UI — Safi Studio</title>
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<meta name="description" content="LaralCN-UI: a shadcn-style copy-and-own Blade component system for Laravel. Pure Blade and Tailwind v4, pulled in via an Artisan CLI. Free, MIT, no lock-in.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { paper:'#F4F1EA', panel:'#EDE8DD', ink:'#1A1815', muted:'#5A554C', line:'#D9D2C4', clay:'#E5533D', clayink:'#C23E2A', moss:'#3F6F4E' },
+  fontFamily: { display:['"Space Grotesk"','ui-sans-serif','system-ui'], body:['Inter','ui-sans-serif','system-ui'] },
+  borderRadius: { sharp:'2px' },
+}}}
+</script>
+<style>
+  html { scroll-behavior:smooth; }
+  body { font-family:Inter,ui-sans-serif,system-ui; -webkit-font-smoothing:antialiased; }
+  .font-display { font-family:"Space Grotesk",ui-sans-serif,system-ui; }
+  .mono { font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,monospace; }
+  .block { transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .block:hover { transform:translateY(-3px); border-color:#1A1815; box-shadow:6px 6px 0 #1A1815; }
+  .link-underline { background-image:linear-gradient(#E5533D,#E5533D); background-size:0% 2px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .2s ease; }
+  .link-underline:hover { background-size:100% 2px; }
+  .btn-primary { transition:transform .15s ease, background-color .15s ease; }
+  .btn-primary:hover { transform:translateY(-2px); background-color:#C23E2A; }
+  .check { color:#3F6F4E; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-10 h-10"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display font-semibold tracking-tight text-[17px]">Safi Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+      <a href="products.html" class="text-ink font-medium">Products</a>
+      <a href="services.html" class="link-underline hover:text-ink">Services</a>
+      <a href="blog.html" class="link-underline hover:text-ink">Blog</a>
+      <a href="about.html" class="link-underline hover:text-ink">About</a>
+    </nav>
+    <a href="contact.html" class="btn-primary bg-clay text-paper text-[15px] font-medium px-4 py-2 rounded-sharp">Start a build</a>
+  </div>
+</header>
+
+<main>
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-20">
+    <p class="mono text-[13px] text-muted mb-5"><a href="products.html" class="link-underline hover:text-ink">Products</a> / LaralCN-UI</p>
+    <div class="grid lg:grid-cols-[1fr_0.9fr] gap-10 items-center">
+      <div>
+        <span class="mono text-[12px] px-2 py-0.5 border border-moss text-moss rounded-sharp">Live · free · MIT</span>
+        <h1 class="font-display font-bold tracking-tight text-4xl sm:text-5xl leading-[1.05] mt-4">LaralCN-UI</h1>
+        <p class="mt-6 text-[17px] text-muted max-w-xl leading-relaxed">A shadcn-style component system for Laravel. Not a runtime library you install and couple to. You pull pure Blade and Tailwind v4 components into your own source tree and fully own them, edit them, ship them, no version chasing.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="https://laralcn-ui.abdulkadersafi.com" class="btn-primary bg-clay text-paper font-medium px-6 py-3 rounded-sharp text-[16px]">Open the docs</a>
+          <a href="https://github.com/Abdulkader-Safi/LaralCN-UI" class="font-medium px-6 py-3 rounded-sharp text-[16px] border border-ink hover:bg-ink hover:text-paper transition-colors">View on GitHub</a>
+        </div>
+      </div>
+      <div class="rounded-sharp border border-ink bg-ink text-paper overflow-hidden shadow-[8px_8px_0_#1A1815]">
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#222019]">
+          <span class="w-2.5 h-2.5 rounded-full bg-clay"></span><span class="w-2.5 h-2.5 rounded-full bg-[#E2B33C]"></span><span class="w-2.5 h-2.5 rounded-full bg-moss"></span>
+          <span class="mono text-[11px] text-white/50 ml-2">install</span>
+        </div>
+        <div class="mono text-[13px] leading-relaxed p-5 space-y-1">
+          <p><span class="text-clay">$</span> php artisan ui:init</p>
+          <p class="text-white/55">→ tokens written to app.css</p>
+          <p><span class="text-clay">$</span> php artisan ui:add button card dialog</p>
+          <p class="text-moss">✓ 3 components copied to your repo</p>
+          <p><span class="text-clay">$</span> php artisan ui:list</p>
+          <p class="text-white/55">25 available · 3 installed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16 grid lg:grid-cols-2 gap-12">
+    <div>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mb-6">Why it's different</h2>
+      <ul class="space-y-3.5 text-[16px] text-muted">
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>Copy-and-own. The components live in your repo, not in <span class="mono text-[14px]">vendor/</span>. Edit anything, no fork needed.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>Two ways in: an Artisan CLI for Laravel, or one-click copy from the docs for plain Blade and Statamic.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>One registry as the single source of truth, so both paths output identical files.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>Tailwind v4 CSS-first theming, with <span class="mono text-[14px]">tailwind-merge</span> so your classes always win.</span></li>
+        <li class="flex gap-3"><span class="check mt-1">✓</span><span>Alpine.js only where interactivity is unavoidable. No JavaScript framework tax.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mb-6">What's in the box</h2>
+      <div class="grid grid-cols-2 gap-2.5 mono text-[13px]">
+        <span class="border border-line rounded-sharp px-3 py-2">button</span>
+        <span class="border border-line rounded-sharp px-3 py-2">input</span>
+        <span class="border border-line rounded-sharp px-3 py-2">select</span>
+        <span class="border border-line rounded-sharp px-3 py-2">dialog</span>
+        <span class="border border-line rounded-sharp px-3 py-2">card</span>
+        <span class="border border-line rounded-sharp px-3 py-2">table</span>
+        <span class="border border-line rounded-sharp px-3 py-2">sidebar</span>
+        <span class="border border-line rounded-sharp px-3 py-2">tabs</span>
+        <span class="border border-line rounded-sharp px-3 py-2 bg-panel">+ blocks</span>
+        <span class="border border-line rounded-sharp px-3 py-2 text-muted">25 total</span>
+      </div>
+      <p class="text-[14px] text-muted mt-4 leading-relaxed">Matched to current shadcn/ui (OKLCH theme, Tailwind v4), including the composable sidebar and the sidebar-08 block.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-ink text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-[1fr_auto] gap-8 items-center">
+    <div>
+      <h2 class="font-display font-bold tracking-tight text-3xl sm:text-4xl leading-tight">Want this themed to your brand?</h2>
+      <p class="mt-3 text-[16px] text-paper/70 max-w-md">The component-system build takes this approach and applies it to your agency's stack and design.</p>
+    </div>
+    <a href="service-detail.html" class="btn-primary inline-block bg-clay text-paper font-medium px-7 py-3.5 rounded-sharp text-[16px] text-center">See the build</a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink text-paper/60 border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px]">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#F4F1EA"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display text-paper">Safi Studio</span>
+      <span class="mono text-[12px] ml-2">safi-studio.com</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+      <a href="products.html" class="link-underline hover:text-paper">Products</a>
+      <a href="services.html" class="link-underline hover:text-paper">Services</a>
+      <a href="blog.html" class="link-underline hover:text-paper">Blog</a>
+      <a href="about.html" class="link-underline hover:text-paper">About</a>
+      <a href="contact.html" class="link-underline hover:text-paper">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

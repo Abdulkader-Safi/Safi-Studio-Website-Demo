@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start a build — Safi Studio</title>
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<meta name="description" content="Tell us what you keep rebuilding. We'll come back with scope, a real price, and a timeline. Replies within one business day.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { paper:'#F4F1EA', panel:'#EDE8DD', ink:'#1A1815', muted:'#5A554C', line:'#D9D2C4', clay:'#E5533D', clayink:'#C23E2A', moss:'#3F6F4E' },
+  fontFamily: { display:['"Space Grotesk"','ui-sans-serif','system-ui'], body:['Inter','ui-sans-serif','system-ui'] },
+  borderRadius: { sharp:'2px' },
+}}}
+</script>
+<style>
+  html { scroll-behavior:smooth; }
+  body { font-family:Inter,ui-sans-serif,system-ui; -webkit-font-smoothing:antialiased; }
+  .font-display { font-family:"Space Grotesk",ui-sans-serif,system-ui; }
+  .mono { font-family:ui-monospace,"SF Mono","JetBrains Mono",Menlo,monospace; }
+  .link-underline { background-image:linear-gradient(#E5533D,#E5533D); background-size:0% 2px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .2s ease; }
+  .link-underline:hover { background-size:100% 2px; }
+  .btn-primary { transition:transform .15s ease, background-color .15s ease; }
+  .btn-primary:hover { transform:translateY(-2px); background-color:#C23E2A; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-10 h-10"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#1A1815"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display font-semibold tracking-tight text-[17px]">Safi Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+      <a href="products.html" class="link-underline hover:text-ink">Products</a>
+      <a href="services.html" class="link-underline hover:text-ink">Services</a>
+      <a href="blog.html" class="link-underline hover:text-ink">Blog</a>
+      <a href="about.html" class="link-underline hover:text-ink">About</a>
+    </nav>
+    <a href="contact.html" class="btn-primary bg-clay text-paper text-[15px] font-medium px-4 py-2 rounded-sharp">Start a build</a>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-20 grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-start">
+    <div>
+      <p class="mono text-[13px] text-clayink mb-4">Start a build</p>
+      <h1 class="font-display font-bold tracking-tight text-4xl sm:text-5xl leading-[1.05]">Tell us what you keep rebuilding.</h1>
+      <p class="mt-6 text-[17px] text-muted max-w-md leading-relaxed">One short message about the tool or system you need. We'll come back with scope, a real price, and a timeline. No deck, no sales-call funnel.</p>
+
+      <div class="mt-8 space-y-4">
+        <div class="flex items-center gap-3 text-[15px]"><span class="w-2 h-2 rounded-full bg-moss"></span><span class="text-muted">Replies within one business day</span></div>
+        <div class="flex items-center gap-3 text-[15px]"><span class="w-2 h-2 rounded-full bg-moss"></span><span class="text-muted">You talk to the engineers, not a salesperson</span></div>
+        <div class="flex items-center gap-3 text-[15px]"><span class="w-2 h-2 rounded-full bg-moss"></span><span class="text-muted">A fixed scope and price before any commitment</span></div>
+      </div>
+
+      <div class="mt-10 bg-panel border border-line rounded-sharp p-5">
+        <p class="mono text-[13px] text-muted mb-1">Prefer email?</p>
+        <a href="mailto:safi.abdulkader@gmail.com" class="link-underline font-medium text-ink text-[16px]">safi.abdulkader@gmail.com</a>
+        <p class="mono text-[12px] text-muted mt-3">(Swap in your safi-studio.com address when it's set up.)</p>
+      </div>
+    </div>
+
+    <form class="bg-ink text-paper rounded-sharp p-6 sm:p-8 space-y-4"
+          onsubmit="event.preventDefault(); var b=this.querySelector('button'); b.textContent='Form not wired yet — connect Formspree or email'; b.classList.remove('bg-clay'); b.classList.add('bg-moss');">
+      <div>
+        <label class="block mono text-[13px] text-paper/60 mb-1.5">Name</label>
+        <input required type="text" class="w-full bg-[#26241e] border border-white/15 rounded-sharp px-4 py-3 text-paper placeholder-paper/40 focus:border-clay focus:outline-none text-[15px]" placeholder="Your name">
+      </div>
+      <div>
+        <label class="block mono text-[13px] text-paper/60 mb-1.5">Email</label>
+        <input required type="email" class="w-full bg-[#26241e] border border-white/15 rounded-sharp px-4 py-3 text-paper placeholder-paper/40 focus:border-clay focus:outline-none text-[15px]" placeholder="you@agency.com">
+      </div>
+      <div>
+        <label class="block mono text-[13px] text-paper/60 mb-1.5">What do you need?</label>
+        <select class="w-full bg-[#26241e] border border-white/15 rounded-sharp px-4 py-3 text-paper focus:border-clay focus:outline-none text-[15px]">
+          <option>Component system build</option>
+          <option>Internal tool / admin build</option>
+          <option>Extension / package build</option>
+          <option>Tooling retainer</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mono text-[13px] text-paper/60 mb-1.5">Tell me about it</label>
+        <textarea required rows="5" class="w-full bg-[#26241e] border border-white/15 rounded-sharp px-4 py-3 text-paper placeholder-paper/40 focus:border-clay focus:outline-none text-[15px]" placeholder="The thing your team keeps rebuilding, roughly what it does, and your stack."></textarea>
+      </div>
+      <button type="submit" class="btn-primary w-full bg-clay text-paper font-medium px-6 py-3 rounded-sharp text-[16px]">Send it over</button>
+      <p class="mono text-[12px] text-paper/40 text-center">No spam, no list. Just a reply from us.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink text-paper/60 border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px]">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9"><svg viewBox="18 24 64 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><g fill="#F4F1EA"><rect x="34" y="28" width="32" height="9"/><rect x="34" y="33" width="9" height="20"/><rect x="34" y="46" width="32" height="9"/><rect x="57" y="49" width="9" height="20"/><rect x="34" y="63" width="32" height="9"/></g><g fill="#E5533D"><rect x="21" y="27" width="6.5" height="46"/><rect x="21" y="27" width="12" height="6.5"/><rect x="21" y="66.5" width="12" height="6.5"/><rect x="72.5" y="27" width="6.5" height="46"/><rect x="67" y="27" width="12" height="6.5"/><rect x="67" y="66.5" width="12" height="6.5"/></g></svg></span>
+      <span class="font-display text-paper">Safi Studio</span>
+      <span class="mono text-[12px] ml-2">safi-studio.com</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+      <a href="products.html" class="link-underline hover:text-paper">Products</a>
+      <a href="services.html" class="link-underline hover:text-paper">Services</a>
+      <a href="blog.html" class="link-underline hover:text-paper">Blog</a>
+      <a href="about.html" class="link-underline hover:text-paper">About</a>
+      <a href="contact.html" class="link-underline hover:text-paper">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

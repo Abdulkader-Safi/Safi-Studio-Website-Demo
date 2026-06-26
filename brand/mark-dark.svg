@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 24 64 52" width="240" height="195"><g>
+      <g fill="#F4F1EA">
+        <!-- top bar -->
+        <rect x="34" y="28" width="32" height="9"/>
+        <!-- upper-left vertical -->
+        <rect x="34" y="33" width="9" height="20"/>
+        <!-- middle bar -->
+        <rect x="34" y="46" width="32" height="9"/>
+        <!-- lower-right vertical -->
+        <rect x="57" y="49" width="9" height="20"/>
+        <!-- bottom bar -->
+        <rect x="34" y="63" width="32" height="9"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="21" y="27" width="6.5" height="46"/>
+        <rect x="21" y="27" width="12" height="6.5"/>
+        <rect x="21" y="66.5" width="12" height="6.5"/>
+      </g>
+      <g fill="#E5533D">
+        <rect x="72.5" y="27" width="6.5" height="46"/>
+        <rect x="67" y="27" width="12" height="6.5"/>
+        <rect x="67" y="66.5" width="12" height="6.5"/>
+      </g></g></svg>
