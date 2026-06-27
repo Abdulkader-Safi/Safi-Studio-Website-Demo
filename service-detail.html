@@ -62,11 +62,12 @@ tailwind.config = { theme: { extend: {
         <a href="contact.html" class="btn-primary inline-block mt-7 bg-clay text-paper font-medium px-6 py-3 rounded-sharp text-[16px]">Scope this build</a>
       </div>
       <div class="bg-panel border border-line rounded-sharp p-6">
-        <p class="mono text-[13px] text-muted">from</p>
-        <p class="font-display font-bold text-4xl mb-4">$4,500</p>
-        <dl class="space-y-2.5 text-[14px]">
+        <p class="mono text-[13px] text-muted">packages from</p>
+        <p class="font-display font-bold text-4xl mb-1">$2,500</p>
+        <a href="#packages" class="link-underline text-[14px] font-medium text-ink">See all three ↓</a>
+        <dl class="space-y-2.5 text-[14px] mt-5 pt-5 border-t border-line">
           <div class="flex justify-between"><dt class="text-muted">Timeline</dt><dd class="font-medium">2 to 4 weeks</dd></div>
-          <div class="flex justify-between"><dt class="text-muted">Components</dt><dd class="font-medium">20+</dd></div>
+          <div class="flex justify-between"><dt class="text-muted">Components</dt><dd class="font-medium">12 to 35+</dd></div>
           <div class="flex justify-between"><dt class="text-muted">Stack</dt><dd class="font-medium">Blade + Tailwind v4</dd></div>
           <div class="flex justify-between"><dt class="text-muted">Ownership</dt><dd class="font-medium">Yours, MIT</dd></div>
         </dl>
@@ -121,6 +122,72 @@ tailwind.config = { theme: { extend: {
         <p class="mono text-[11px] text-white/40 mt-3">Themed to your brand, dropped straight into the repo.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- packages -->
+<section id="packages" class="border-b border-line scroll-mt-20">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16">
+    <div class="max-w-xl mb-10">
+      <h2 class="font-display font-bold text-2xl sm:text-3xl mb-3">Three ways to buy it</h2>
+      <p class="text-[16px] text-muted leading-relaxed">Same build, scoped to where your team is. Every package is one fixed price, code handed over and fully yours. No licence, no runtime you keep paying for.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-5 items-start">
+
+      <!-- Starter -->
+      <article class="block bg-paper border border-line rounded-sharp p-7 flex flex-col">
+        <p class="font-display font-semibold text-lg">Starter</p>
+        <p class="text-[14px] text-muted mt-1">Solo devs and small teams.</p>
+        <p class="font-display font-bold text-4xl mt-5">$2,500</p>
+        <p class="mono text-[12px] text-muted mt-1">one-time · 2 weeks</p>
+        <ul class="space-y-3 text-[15px] text-muted mt-6 mb-7 flex-1">
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>12 core components: button, input, select, modal, card, table, nav, layout.</span></li>
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>Themed to your brand colours and type.</span></li>
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>Tailwind v4 token setup.</span></li>
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>Docs with a live preview of each component.</span></li>
+        </ul>
+        <a href="contact.html?package=starter" class="mt-auto text-center border border-ink text-ink font-medium px-5 py-3 rounded-sharp text-[15px] transition hover:bg-ink hover:text-paper">Choose Starter</a>
+      </article>
+
+      <!-- Studio (featured) -->
+      <article class="bg-ink text-paper border border-ink rounded-sharp p-7 flex flex-col shadow-[6px_6px_0_#C23E2A] lg:-mt-3">
+        <div class="flex items-center justify-between">
+          <p class="font-display font-semibold text-lg">Studio</p>
+          <span class="mono text-[11px] px-2 py-0.5 bg-clay text-paper rounded-sharp">Most popular</span>
+        </div>
+        <p class="text-[14px] text-paper/60 mt-1">Agencies shipping client sites.</p>
+        <p class="font-display font-bold text-4xl mt-5">$4,500</p>
+        <p class="mono text-[12px] text-paper/55 mt-1">one-time · 3 weeks</p>
+        <p class="text-[13px] text-paper/70 mt-6 mb-3 font-medium">Everything in Starter, plus:</p>
+        <ul class="space-y-3 text-[15px] text-paper/80 mb-7 flex-1">
+          <li class="flex gap-3"><span class="text-clay mt-0.5">✓</span><span>20+ components, including richer tables and forms.</span></li>
+          <li class="flex gap-3"><span class="text-clay mt-0.5">✓</span><span>Artisan CLI: <span class="mono text-[13px] text-paper">php artisan ui:add</span> any component.</span></li>
+          <li class="flex gap-3"><span class="text-clay mt-0.5">✓</span><span>Handover call so the team can extend it.</span></li>
+          <li class="flex gap-3"><span class="text-clay mt-0.5">✓</span><span>30 days of post-handover fixes.</span></li>
+        </ul>
+        <a href="contact.html?package=studio" class="btn-primary mt-auto text-center bg-clay text-paper font-medium px-5 py-3 rounded-sharp text-[15px]">Choose Studio</a>
+      </article>
+
+      <!-- Agency -->
+      <article class="block bg-paper border border-line rounded-sharp p-7 flex flex-col">
+        <p class="font-display font-semibold text-lg">Agency</p>
+        <p class="text-[14px] text-muted mt-1">Multi-brand teams at scale.</p>
+        <p class="font-display font-bold text-4xl mt-5">$7,500</p>
+        <p class="mono text-[12px] text-muted mt-1">one-time · 4 weeks</p>
+        <p class="text-[13px] text-ink mt-6 mb-3 font-medium">Everything in Studio, plus:</p>
+        <ul class="space-y-3 text-[15px] text-muted mb-7 flex-1">
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>35+ components across data tables, forms, and charts.</span></li>
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>Multi-brand theming and a built-in dark mode.</span></li>
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>3 months of new components and version bumps.</span></li>
+          <li class="flex gap-3"><span class="check mt-0.5">✓</span><span>A private channel with the engineer who built it.</span></li>
+        </ul>
+        <a href="contact.html?package=agency" class="mt-auto text-center border border-ink text-ink font-medium px-5 py-3 rounded-sharp text-[15px] transition hover:bg-ink hover:text-paper">Choose Agency</a>
+      </article>
+
+    </div>
+
+    <p class="text-[15px] text-muted mt-8">Not sure which fits? <a href="contact.html" class="link-underline font-medium text-ink">Tell us your stack</a> and we'll point you at one, no pitch.</p>
   </div>
 </section>
 
